@@ -1,1 +1,16 @@
-theme: jekyll-theme-dinky
+plugins:
+    - jekyll-redirect-from
+highlighter: rouge
+
+markdown: kramdown
+exclude: ['readme.md', 'Gemfile.lock', 'Gemfile', 'run.sh', 'CNAME']
+
+# site configuration
+# ------------------
+
+title: 重定向
+description: 'How should I greet, with silence and tears'
+keywords: 'Life, Love, Music, Moive, Book, Reader'
+author: Hang Yan
+email: yanhangyhy@gmail.com
+
