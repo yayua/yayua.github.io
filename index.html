@@ -1,0 +1,33 @@
+---
+title: 首页
+permalink: /
+---
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#151515"/>
+    <meta charset="utf-8"/>        
+</head>
+
+<body>
+    <div class="content-wrap">
+        {% include header.html %}
+        <div class="content-main">
+            <div class="post-list">
+                {% assign posts = site.posts | where: "layout", "post" %}
+                {% for post in posts %}
+                <a href="{{ post.url }}">
+                    <div class="post-item">
+                        <span class="post-title">{{ post.title }}</span>
+                        <span class="post-date">{{ post.date|date: "%m-%d,&nbsp;%Y" }}</span>
+                        <div class="post-divider"></div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
